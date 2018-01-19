@@ -40,3 +40,18 @@ __attribute__((section("BAR"))) void foo () {
 ```
 nm SimpleSection.o
 ```
+
+弱符号: 未初始化的全局变量和 weak 属性.
+```
+__attribute__ ((weak))
+```
+
+弱引用: 链接器不会报错.
+```
+__attribute__ ((weakref)) void foo();
+```
+
+以 debug 开始的段: 调试信息. 
+```
+strip foo
+```
